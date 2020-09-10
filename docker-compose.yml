@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    image: shutingyovo/staticweb:latest
+    restart: always
+
+  proxy:
+    image: shutingyovo/reverseproxy:latest
+    ports:
+      - 8080:8080
+    restart: always
+
